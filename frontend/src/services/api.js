@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const api = axios.create({ baseURL: 'https://PON-AQUI-TU-URL-BACKEND.vercel.app/api', headers: { 'Content-Type': 'application/json' } })
+const api = axios.create({ baseURL: 'https://c3citas-medicasback.vercel.app/api', headers: { 'Content-Type': 'application/json' } })
 
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('token_caso3')
