@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  body { font-family: 'Nunito', sans-serif; background-color: #080d14; color: #e2e8f0; margin: 0; }
+  h1,h2,h3,h4 { font-family: 'Plus Jakarta Sans', sans-serif; }
+}
+
+@layer components {
+  .btn-primary   { @apply bg-med-500 hover:bg-med-600 text-white font-semibold px-5 py-2.5 rounded-xl transition-all duration-200 active:scale-95 shadow-lg shadow-med-500/20; }
+  .btn-secondary { @apply bg-ink-600 hover:bg-ink-500 text-slate-200 font-medium px-5 py-2.5 rounded-xl transition-all duration-200 border border-ink-400/40; }
+  .btn-danger    { @apply bg-red-500/10 hover:bg-red-500/20 text-red-400 font-medium px-4 py-2 rounded-lg transition-all border border-red-500/20; }
+  .btn-edit      { @apply bg-med-500/10 hover:bg-med-500/20 text-med-400 font-medium px-4 py-2 rounded-lg transition-all border border-med-500/20; }
+  .input-field   { @apply w-full bg-ink-700 border border-ink-400/40 text-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-med-500 focus:ring-1 focus:ring-med-500/30 transition-all placeholder:text-ink-300; }
+  .card          { @apply bg-ink-800 border border-ink-600/50 rounded-2xl; }
+  .table-header  { @apply text-xs font-semibold text-ink-300 uppercase tracking-widest px-4 py-3 text-left; }
+  .table-cell    { @apply px-4 py-3.5 text-sm text-slate-300; }
+  .table-row     { @apply border-b border-ink-700/60 hover:bg-ink-700/30 transition-colors; }
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #0d1420; }
+::-webkit-scrollbar-thumb { background: #243352; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #3d5070; }
+
+@keyframes fadeIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
+.fade-in { animation: fadeIn .3s ease forwards; }
