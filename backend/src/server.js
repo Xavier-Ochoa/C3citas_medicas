@@ -15,7 +15,8 @@ app.use(cors({
   origin: [
     'http://localhost:5173',
     'http://localhost:5174',
-    'https://c3citas-medicasfront.vercel.app',    
+    'https://c3citas-medicasfront.vercel.app',
+    'https://c3-citas-medicas.vercel.app',
     process.env.URL_FRONTEND,
   ].filter(Boolean),
   methods: ['GET','POST','PUT','DELETE'],
